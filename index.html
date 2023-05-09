@@ -1,0 +1,63 @@
+<html>
+<head>
+<title>T E S T</title>
+<style>
+* {color:#000000;transition:all 0.4s ease;}
+</style>
+<script>
+function resultado() {
+var p1, p2, p3, p4, nota;
+ 
+
+if (document.getElementById('p11').checked==true) {p1=1}
+if (p1==1) {document.querySelectorAll('.pregunta1')[0].style.color='#00FF00'}
+else {p1=0}
+
+if (document.getElementById('p22').checked==true) {p2=1}
+if (p2==1) {document.querySelectorAll('.pregunta2')[1].style.color='#00FF00'}
+else {p2=0}
+
+if (document.getElementById('p33').checked==true) {p3=1}
+if (p3==1) {document.querySelectorAll('.pregunta3')[2].style.color='#00FF00'}
+else {p3=0}
+
+if (document.getElementById('p44').checked==true) {p4=1}
+if (p4==1) {document.querySelectorAll('.pregunta4')[3].style.color='#00FF00'}
+else {p4=0}
+ 
+nota=p1+p2+p3+p4;
+document.getElementById('resultado').innerHTML="Aciertos: "+nota;
+rs=confirm("C o n t i n u a r . . .");
+if (rs==false) {document.forms[0].reset();location.reload()}
+}
+</script>
+</head>
+<body>
+<h2>T E S T</h2>
+<hr>
+<form style="font:normal 16px sans-serif">
+<p>¿ME QUIERES MUCHO?</p>
+<p class="pregunta1"><input type="radio" name="pregunta1" id="p11"> SI</p>
+<p class="pregunta1"><input type="radio" name="pregunta1" id="p12"> SUPER SI</p>
+
+ 
+<p>¿QUIERES JUGAR Y HABLAR CONMIGO TODAS LAS TARDES Y NOCHES?</p>
+<p class="pregunta2"><input type="radio" name="pregunta2" id="p21"> SI</p>
+<p class="pregunta2"><input type="radio" name="pregunta2" id="p22"> SUPER SI</p>
+
+ 
+<p>QUIERO QUE ESCUCHES ALGO IMPORTANTE</p>
+<p class="pregunta3"><input type="radio" name="pregunta3" id="p31"> SI</p>
+<p class="pregunta3"><input type="radio" name="pregunta3" id="p32"> DEMASIADO SI</p>
+
+ 
+<p><a href='https://www.youtube.com/watch?v=gpMZ3B-hwhM'> ES UNA CANCION SUPER LINDA ALGUNAS PARTES </a></p>
+<p class="pregunta4"><input type="radio" name="pregunta4" id="p41"> xD</p>
+<p class="pregunta4"><input type="radio" name="pregunta4" id="p42"> :3</p>
+
+<hr>
+<h2 id="resultado">Aciertos: 0</h2>
+<p><input type="button" value=" R E S U L T A D O " onclick="resultado()"/></p>
+</form>
+</body>
+</html>
